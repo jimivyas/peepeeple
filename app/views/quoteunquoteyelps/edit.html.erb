@@ -1,2 +1,24 @@
-<h1>Quoteunquoteyelps#edit</h1>
-<p>Find me in app/views/quoteunquoteyelps/edit.html.erb</p>
+<h1>EDIT THIS LISTING</h1>
+<p>
+	<%= link_to "GO BACK" @quoteunquoteyelp %>
+
+</p>
+
+<%= form_for @quoteunquoteyelp do |f| %>
+	<p>
+		<%= f.label 'name' %> <br />
+		<%= f.textfield "name" %>
+	</p>
+	<p>
+		<%= f.label 'description' %> <br />
+		<%= f.textfield "description" %>
+	</p>
+	<p>
+		<%= f.label 'name' %> <br />
+		<%= f.textfield "name" %>
+	</p>
+	<p>
+		<%= submit_tag "Save" %>
+	</p>
+
+<% end %>

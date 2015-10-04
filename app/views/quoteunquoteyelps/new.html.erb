@@ -1,2 +1,29 @@
-<h1>Quoteunquoteyelps#new</h1>
-<p>Find me in app/views/quoteunquoteyelps/new.html.erb</p>
+<h1> ADD A YELP FOR PEOPLE (PLEASE) </h1>
+<%= link_to "BACK TO COMPLETE YELP LIST", quoteunquoteyelps_url %>
+<%= form_for @quoteunquoteyelp do |f| %>
+	<p>
+		<%= f.label "name" %><br>
+		<%= f.text_field "name" %>
+	</p>
+	<p>
+		<%= f.label "description" %><br>
+		<%= f.text_field "description" %>
+	</p>
+	<p>
+		<%= f.label "year" %><br>
+		<%= f.text_field "year" %>
+	</p>
+
+	<p>
+		<%= f.label "photourl" %><br>
+		<%= f.text_field "photourl" %>
+	</p>
+
+	<p>
+		<%= f.label "url" %><br>
+		<%= f.text_field "url" %>
+	</p>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+<% end %>

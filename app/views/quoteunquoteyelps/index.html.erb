@@ -1,6 +1,7 @@
 <h1>YELPS FOR PEOPLES</h1>
 <%= link_to "ADD A NEW YELP FOR PEOPLE", "/quoteunquoteyelps/new" %>
 	<% @quoteunquoteyelps.each do |yelp| %>
+		______________________________________________
 		<p>  <%= yelp[:name] %>, created in <%= yelp[:year] %></p>
 		<%= link_to image_tag(yelp.photourl), "/quoteunquoteyelps/#{yelp.id}" %>
 	<% end %>

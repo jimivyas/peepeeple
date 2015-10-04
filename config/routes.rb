@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
     def update
       @quoteunquoteyelp = Quoteunquoteyelp.find(params[:id]))
-  
+
       if @quoteunquoteyelp.update_attributes(quoteunquoteyelp_params)
         redirect_to quoteunquoteyelp_path(@quoteunquoteyelp)
       else
@@ -51,7 +51,7 @@ Rails.application.routes.draw do
       params.require(:quoteunquoteyelp).permit(:name, :description, :year)
     end
   end
-  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

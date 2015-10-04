@@ -3,4 +3,4 @@
 	<% @quoteunquoteyelps.each do |yelp| %>
 		<p>  <%= yelp[:name] %>, created in <%= yelp[:year] %></p>
 		<%= link_to image_tag(yelp.url), "/pictures/#{yelp.id}" %>
-	<%= end %>
+	<% end %>

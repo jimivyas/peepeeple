@@ -1,4 +1,5 @@
 <%= link_to "BACK TO COMPLETE YELP LIST", quoteunquoteyelps_url %> | <%= link_to "CHANGE IT UP", edit_quoteunquoteyelp_path(@quoteunquoteyelp) %> | <%= link_to "Delete", @quoteunquoteyelp, method: :delete, data: {confirm: "THIS IS YOUR LAST CHANCE, YOU SURE YOU WANNA GET RID OF THIS YELP FOR PEOPLE"} %>
 
-<p><%= @quoteunquoteyelp[:name] %>, <%= @quoteunquoteyelp[:year] %></p>
+<p><%= @quoteunquoteyelp[:name] %>, created in <%= @quoteunquoteyelp[:year] %></p>
 <%= image_tag @quoteunquoteyelp.photourl %>
+<p><%= @quoteunquoteyelp[:description] %></p>

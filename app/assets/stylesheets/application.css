@@ -22,10 +22,12 @@ html, body {
 	padding-right: 10%;
 	padding-bottom: 2%;
 	height: 100%;
+
 }
 
 
 body {
+	text-align: center;
 	background-image:url("bg.png");
 	background-repeat: repeat;
 	font-family: 'Maven Pro', sans-serif;

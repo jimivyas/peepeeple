@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'reviews/show'
+	root 'quoteunquoteyelps#index'
 
-  get 'reviews/create'
-
-  get 'reviews/destroy'
-
-  root 'quoteunquoteyelps#index'
-     resources :quoteunquoteyelps
-  end
+	resources :quoteunquoteyelps do
+		resources :reviews, only: [:show, :create, :destroy]
+	end
+end

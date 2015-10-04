@@ -1,21 +1,21 @@
 <h1>EDIT THIS LISTING</h1>
 <p>
-	<%= link_to "GO BACK" @quoteunquoteyelp %>
+	<%= link_to "GO BACK", @quoteunquoteyelp %>
 
 </p>
 
 <%= form_for @quoteunquoteyelp do |f| %>
 	<p>
 		<%= f.label 'name' %> <br />
-		<%= f.textfield "name" %>
+		<%= f.text_field "name" %>
 	</p>
 	<p>
 		<%= f.label 'description' %> <br />
-		<%= f.textfield "description" %>
+		<%= f.text_field "description" %>
 	</p>
 	<p>
 		<%= f.label 'name' %> <br />
-		<%= f.textfield "name" %>
+		<%= f.text_field "name" %>
 	</p>
 	<p>
 		<%= submit_tag "Save" %>

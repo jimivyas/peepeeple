@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-     root 'quoteunquoteyelps#index'
+  get 'reviews/show'
+
+  get 'reviews/create'
+
+  get 'reviews/destroy'
+
+  root 'quoteunquoteyelps#index'
      resources :quoteunquoteyelps
   end

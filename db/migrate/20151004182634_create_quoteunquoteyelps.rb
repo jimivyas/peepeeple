@@ -1,6 +1,6 @@
-class CreateYelpForPeople < ActiveRecord::Migration
+class CreateQuoteunquoteyelps < ActiveRecord::Migration
   def change
-    create_table :yelp_for_people do |t|
+    create_table :quoteunquoteyelps do |t|
       t.string :name
       t.text :description
       t.integer :year

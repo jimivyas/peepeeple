@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004182328) do
+ActiveRecord::Schema.define(version: 20151004182634) do
 
-  create_table "yelp_for_people", force: true do |t|
+  create_table "quoteunquoteyelps", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "year"

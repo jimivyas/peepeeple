@@ -1,4 +1,4 @@
 class Quoteunquoteyelp < ActiveRecord::Base
 
-	hasmany:reviews
+	has_many:reviews
 end

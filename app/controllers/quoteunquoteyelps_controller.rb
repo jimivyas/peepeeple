@@ -6,6 +6,9 @@ def index
 
   def show
     @quoteunquoteyelp = Quoteunquoteyelp.find(params[:id])
+
+    @review = @quoteunquoteyelp.reviews.build
+
   end
 
   def new

@@ -2,4 +2,39 @@
 
 <p><%= @quoteunquoteyelp[:name] %>, created in <%= @quoteunquoteyelp[:year] %></p>
 <%= image_tag @quoteunquoteyelp.photourl %>
-<p><%= @quoteunquoteyelp[:description] %></p>
+<p><%= @quoteunquoteyelp[:description] %></p
+ <h3>Reviews</h3>
+
+  <p>Reviews for <%= @quoteunquoteyelp.name %></p>
+
+  <% @quoteunquoteyelp.reviews.each do |review| %>
+    <p>
+      <%= review.comment %>
+      <br>
+       Added on: <%= review.created_at %>
+    </p>
+  <% end %>
+
+  <h4>New Review</h4>
+
+  <%= form_for([@quoteunquoteyelp, @review]) do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :comment %><br />
+      <%= f.text_area :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
